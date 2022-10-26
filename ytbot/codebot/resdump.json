@@ -1,0 +1,352 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "VNWWHIsjqXeyotEWyk8iaS7d3co",
+    "nextPageToken": "CAoQAA",
+    "regionCode": "US",
+    "pageInfo": {
+        "totalResults": 5625,
+        "resultsPerPage": 10
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "O-OqxBX_XaAo4qz5mqd2EqujlPM",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "c-D-tpvgTBg"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-07T20:46:20Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "A New Crew Launches to the Space Station on This Week @NASA \u2013 October 7, 2022",
+                "description": "Launching a new crew to the space station, the plan moving forward for Artemis I, and Webb's new look at a pair of galaxies \u2026 a ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/c-D-tpvgTBg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/c-D-tpvgTBg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/c-D-tpvgTBg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-07T20:46:20Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "6Y_vkN5DOYgoUYoWf7Sb28tlAhg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "HbT9Xm-R3zc"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-05T19:00:08Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "NASA Explorers Season 5, Episode 3: Space School",
+                "description": "Before Jessica Watkins was an astronaut, she was a geologist. Now working on the International Space Station, Jessica and her ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/HbT9Xm-R3zc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/HbT9Xm-R3zc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/HbT9Xm-R3zc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-05T19:00:08Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "JYJ0AkBCApsDjBKfoxif_R-cgW4",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "kakZMJU94vU"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-05T17:01:50Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "NASA&#39;s SpaceX Crew-5 Mission Launches to the Space Station (Official NASA Broadcast)",
+                "description": "Our #Crew5 mission to the International Space Station is targeted for liftoff at noon EDT (1600 UTC) Wednesday, Oct. 5, 2022, ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/kakZMJU94vU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/kakZMJU94vU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/kakZMJU94vU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-05T17:01:50Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "ZDWhyHIofZFoFeXBi60AiS5B-dU",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "40uEMAv3R90"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-04T18:14:58Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "Snoopy is Going to Space on NASA&#39;s Artemis I Moon Mission",
+                "description": "There may not be any humans aboard NASA's #Artemis I flight test, but there will be a special canine: Snoopy! Learn why ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/40uEMAv3R90/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/40uEMAv3R90/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/40uEMAv3R90/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-04T18:14:58Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "7Kz6bnYVdxBZRXvZSeGZRsNmNEg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "AAzM1iugWoY"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-03T16:43:40Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "NASA&#39;s SpaceX Crew-5 Mission to the Space Station (Official Trailer)",
+                "description": "NASA and SpaceX are targeting no earlier than noon EDT (1600 UTC) Wednesday, Oct. 5, 2022, for the launch of the agency's ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/AAzM1iugWoY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/AAzM1iugWoY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/AAzM1iugWoY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-03T16:43:40Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "4YSGmiX9CrdnwuIecc9KaiD8_yA",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "PcA_LQGFoi8"
+            },
+            "snippet": {
+                "publishedAt": "2022-09-30T23:03:20Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "The World\u2019s First-Ever Planetary Defense Test on This Week @NASA \u2013 September 30, 2022",
+                "description": "The world's first-ever planetary defense test is a big hit, a major hurricane spotted from space, and moving our mega Moon rocket ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/PcA_LQGFoi8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/PcA_LQGFoi8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/PcA_LQGFoi8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-30T23:03:20Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "rmQXPe-avAPs0OEE_ykMsl1nby4",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "fsZo1cxMqck"
+            },
+            "snippet": {
+                "publishedAt": "2022-09-27T00:35:33Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "NASA&#39;s DART Mission Post-Asteroid-Impact News Briefing",
+                "description": "NASA's Double Asteroid Redirection Test (DART) mission has attempted humanity's first-ever test of planetary defense! The DART ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/fsZo1cxMqck/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/fsZo1cxMqck/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/fsZo1cxMqck/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-27T00:35:33Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "b4xNufkkiomQH6WRxXu5NjNma2E",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "4RA8Tfa6Sck"
+            },
+            "snippet": {
+                "publishedAt": "2022-09-26T23:40:59Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "DART&#39;s Impact with Asteroid Dimorphos (Official NASA Broadcast)",
+                "description": "Countdown to impact as NASA's Double Asteroid Redirection Test (DART) attempts humanity's first-ever test of planetary defense!",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/4RA8Tfa6Sck/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/4RA8Tfa6Sck/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/4RA8Tfa6Sck/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-26T23:40:59Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "uX8njMiZvG7_e5AtHL3etqGAu_4",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "-6Z1E0mW2ag"
+            },
+            "snippet": {
+                "publishedAt": "2022-09-26T23:28:44Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "Watch a Live Feed from NASA\u2019s DART Spacecraft on Approach to Asteroid Dimorphos",
+                "description": "NASA's Double Asteroid Redirection Test (DART) has one single instrument onboard \u2013 the Didymos Reconnaissance and ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/-6Z1E0mW2ag/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/-6Z1E0mW2ag/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/-6Z1E0mW2ag/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-26T23:28:44Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "UHlMkFxAqtuC2GeVUnQanwcd04E",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "nHBuVbGkmBY"
+            },
+            "snippet": {
+                "publishedAt": "2022-09-26T15:57:16Z",
+                "channelId": "UCLA_DiR1FfKNvjuUpBHmylQ",
+                "title": "NASA&#39;s DART Mission to an Asteroid (Official Mission Trailer)",
+                "description": "On Sept. 26, 2022, NASA's Double Asteroid Redirection Test (DART) spacecraft will intentionally crash into a small asteroid, ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/nHBuVbGkmBY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/nHBuVbGkmBY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/nHBuVbGkmBY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NASA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-26T15:57:16Z"
+            }
+        }
+    ]
+}

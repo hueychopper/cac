@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    {% load codebot_extras %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main: CAC</title>
+    <link href="{% static 'main.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Main</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <div class="main" style="min-height: 100vh;">
+        <form method="get" action="{% url 'home' %}">
+            <div>
+                <input name="chn" id="channel-url" class="channel-url" placeholder="Input channel Name" /><br />
+                <input name="maxResults" placeholder="How many videos?" class="advanced vidcount" />
+            </div> 
+            <!-- <br /> -->
+            <input type="submit" value="Check" class="t_sub" />
+            <button onclick="showopts()" id="adv" class="adv" type="button">Advanced options <ion-icon name="caret-down-outline"></ion-icon></button>
+        </form>
+
+        <!-- <form method="get" action="{% url 'home'}"></form> -->
+        
+        <div>
+            {% pack_props trs titles urls as header %}
+            {% for script, title, url in header %}
+                {% flag_text script as ins %}
+                <div class="header dropdown" id="info">
+                    <div style="width: 80%">
+                        <p>{{title}}: {{url}}</p>
+                        <h3><strong><i>{{ins.0}}</i></strong></h3>
+                    </div>
+                    <div class="icon" id="icon" title="More info" onclick='dropinfo("{{forloop.counter}}")'>
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </div>
+                    
+                    <div class="interest-text" id="im_{{forloop.counter}}">
+                        <h4>Possible matches: </h4><br />
+                        {% for ref in ins.1 %}
+                            <span><a href="#" class="split">{{strref}}</a></span><br /><&#10 />
+                        {% endfor %}
+                    </div><br />
+                    <div class="more-info" id="mi_{{forloop.counter}}">
+                        <span>{{script}}</span>
+                    </div>
+                </div>
+            {% endfor %}          
+        </div>
+        <div></div>
+        <br /><br /><br />
+        <br />
+        <footer>
+            <div style="background-color: #e54624; color: #fff">
+                <p>User Agent: {{UA}}</p>
+                <p>Browser Name: {{browser_name}}</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{% static 'main.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

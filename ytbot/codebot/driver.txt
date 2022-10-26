@@ -1,0 +1,100 @@
+# def ytAPI(q, type, mr=10):
+#     api_name = "youtube"
+#     api_version = "v3"
+#     DEVELOPER_KEY = env('YT_KEY')
+
+#     youtube = googleapiclient.discovery.build(api_name, api_version, developerKey=DEVELOPER_KEY)
+#     request = youtube.search().list(
+#         part="id,snippet",
+#         type=type,
+#         q=q,
+#         maxResults=mr
+#     )
+#     res = request.execute()
+#     with open("resdump.json", "w") as js:
+#         js.write(json.dumps(res, indent=4))
+#         js.close()
+
+#     js2 = open("resdump.json", "r")
+#     allJSON = json.load(js2)
+#     js2.close()
+#     titles = []
+#     urls = []
+#     count = 0
+#     # try:
+#     for i in allJSON["items"]:
+#         if i["snippet"]["channelTitle"] == q:
+#             channelURL = "https://youtube.com/c/"+str(q)
+#             channelId = i['snippet']['channelId']
+#             getvids = youtube.search().list(part="id,snippet",channelId=channelId,order="date",maxResults=mr)
+#             vids = getvids.execute()
+#             # print(vids)
+#             with open("resdump.json", "w") as jsf:
+#                 jsf.write(json.dumps(vids, indent=4))
+#                 for result in vids["items"]:
+#                     titles.append(result["snippet"]["title"])
+#                     urls.append("https://youtube.com/watch?v="+result["id"]["videoId"])
+
+#             caps = youtube.captions().list(part="id,snippet",videoId=i["id"]["videoId"])
+#             caps.execute()
+
+#             break
+#         else:
+#             count += 1
+#     if count == len(allJSON["items"]):
+#         print("NO channel found. try increasing results visible")
+#         sys.exit(0)
+
+#     # except:
+#     #     print("API key may have expired!")
+#     #     return "ERROR: API_key"
+
+#     # return titles,urls
+#     print(titles)
+
+# # ytAPI("NASA", "channel")
+
+
+
+
+
+
+
+def check_vids(current_vid):
+        wd.get(applinks[current_vid])
+        time.sleep(3)
+        # btn_script = wd.find_element(By.XPATH, "//button[@class='style-scope yt-icon-button']")
+        btn_script = wd.find_element(By.XPATH, "//button[@aria-label='More actions']")
+        btn_script.click()
+        time.sleep(1.5)
+        get_transcript = None
+        try:
+            menu_items = wd.find_elements(By.XPATH, "//*[@class='style-scope ytd-menu-popup-renderer']")
+            for item in menu_items:
+                if item.text == "Show transcript":
+                    get_transcript = item
+                    break
+        except:
+            print("it seems we cant find this?")
+        
+
+        # print(get_transcript) # works
+        if get_transcript != None:
+            get_transcript.click()
+            time.sleep(2)
+            transcript = wd.find_element(By.ID, "segments-container")
+            sep_texts = transcript.find_elements(By.XPATH,".//*")
+            transcript_text = []
+            for element in sep_texts:
+                if element.tag_name == "yt-formatted-string":
+                    transcript_text.append(element.text)
+
+            # print(transcript_text)
+            return transcript_text
+        else:
+            print("this transcript does not exist")
+            return []
+
+    # all_transcripts = [check_vids(i) for i in range(0,len(applinks))]
+    # all_transcripts = [check_vids(0)]
+    all_transcripts = []
