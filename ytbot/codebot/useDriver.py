@@ -12,6 +12,7 @@ import requests
 from youtube_transcript_api import YouTubeTranscriptApi
 import os
 
+
 env = environ.Env()
 environ.Env.read_env()
 def get_tr(id):
@@ -83,4 +84,5 @@ def tr_driver(name, dir, input_url, mr=10):
     base = useDriver(name, dir, input_url, mr)
     trs = [get_tr(id) for id in base[0]]
     return trs, base[1], base[2]
+
 

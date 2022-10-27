@@ -26,35 +26,78 @@
             <input type="submit" value="Check" class="t_sub" />
             <button onclick="showopts()" id="adv" class="adv" type="button">Advanced options <ion-icon name="caret-down-outline"></ion-icon></button>
         </form>
-
-        <!-- <form method="get" action="{% url 'home'}"></form> -->
         
         <div>
             {% pack_props trs titles urls as header %}
             {% for script, title, url in header %}
-                {% flag_text script as ins %}
-                <div class="header dropdown" id="info">
-                    <div style="width: 80%">
-                        <p>{{title}}: {{url}}</p>
-                        <h3><strong><i>{{ins.0}}</i></strong></h3>
+                {% flag_text script as ins %} <!--ins is in json format-->
+                {% getlen ins.1 as refamt %}
+                {% get_desc url as nd %}
+                    <div class="header dropdown" id="info">
+                        <div style="width: 80%">
+                            <p>{{title}}: {{url}}</p>
+                            <h3 id="pred" data-flag="{{ins.0}}"><strong><i>{{ins.0}}</i></strong></h3>
+                        </div>
+                        <div class="icon" id="icon" title="More info" onclick='dropinfo("{{forloop.counter}}")'>
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                        </div>
+                        
+                        <div class="interest-text" id="im_{{forloop.counter}}">
+                            <!-- <h3>Possible matches: </h3> -->
+                            <div class="main-wrapper active-ref">
+                                <div class="ref-menu">
+                                    <div class="iref">
+                                        <div class="details-shown">
+                                            <div class="details-rel">
+                                                <div class="headeropts">
+                                                    <div class="buttons">
+                                                        <button class="lineref" id="reff_{{forloop.counter}}" onclick="clickevssep(this,'{{forloop.counter}}')">Reference</button>
+                                                        <button style="color: #fff" class="desc" id="descc_{{forloop.counter}}" onclick="clickevssep(this,'{{forloop.counter}}')">Description</button>
+                                                    </div>
+                                                </div>
+                                                <div class="anot-default default-{{forloop.counter}} displaytrue">
+                                                    <div class="refamt">
+                                                        <span class="len">Amount of refs found: {{refamt}}</span>
+                                                    </div>
+                                                    <div class="reflist">
+                                                        <div class="refitem">
+                                                            <a class="jumptoref">
+                                                                <div class="d-fref">
+                                                                    <div class="inner-ref">
+                                                                        {% for ref in ins.1 %} 
+                                                                        <p class="reference" style="white-space: pre-wrap; cursor: pointer;"
+                                                                        onclick='jumpToRef("{{ref}}", "{{forloop.counter}}")'>{{ref}}</p>
+                                                                        {% endfor %}
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="extra">
+                                                        <span class="len"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="anot-desc desc-ref_{{forloop.counter}}">
+                                                    <pre class="desc-content">
+                                                        <p style="color: #fff">{{nd}}</p>
+                                                    </pre>
+                                                </div>
+                                            </div>
+                                                
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-info" id="mi_{{forloop.counter}}">
+                            {% for text in script %}
+                                <p style="display: inline;" class="pst_">{{text}}</p><br />
+                            {% endfor %}
+                        </div>
                     </div>
-                    <div class="icon" id="icon" title="More info" onclick='dropinfo("{{forloop.counter}}")'>
-                        <ion-icon name="add-circle-outline"></ion-icon>
-                    </div>
-                    
-                    <div class="interest-text" id="im_{{forloop.counter}}">
-                        <h4>Possible matches: </h4><br />
-                        {% for ref in ins.1 %}
-                            <span><a href="#" class="split">{{strref}}</a></span><br /><&#10 />
-                        {% endfor %}
-                    </div><br />
-                    <div class="more-info" id="mi_{{forloop.counter}}">
-                        <span>{{script}}</span>
-                    </div>
-                </div>
             {% endfor %}          
         </div>
-        <div></div>
         <br /><br /><br />
         <br />
         <footer>
@@ -68,5 +111,34 @@
     <script src="{% static 'main.js' %}"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(".lineref").addClass("selected");
+        function clickevssep(currentEl, currentId) {
+            $(".default-"+currentId).addClass("displaytrue");
+            $(".desc-ref_"+currentId).removeClass("displaytrue");
+            if($(currentEl).attr('class') == "lineref") {
+                $("#descc_"+currentId).removeClass("selected");
+                $(".desc-ref_"+currentId).removeClass("displaytrue");
+                $(".default-"+currentId).addClass("displaytrue");
+                $("#reff_"+currentId).addClass("selected");
+            } else if($(currentEl).attr('class') == "desc") {
+                $("#reff_"+currentId).removeClass("selected");
+                $(".default-"+currentId).removeClass("displaytrue");
+                $("#descc_"+currentId).addClass("selected");
+                $(".desc-ref_"+currentId).addClass("displaytrue");
+            }
+        }
+
+        function jumpToRef(text, currentId) {
+            const alldata = JSON.parse("{{jctx|escapejs}}");
+            var xpath = `//p[text()='${text}' and @class='pst_']`;
+            var match = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue;
+            console.log(match);
+            match.style.backgroundColor = "yellow";
+            match.style.color = "#000";
+        }
+    </script>
 </body>
 </html>

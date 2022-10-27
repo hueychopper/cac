@@ -1,6 +1,6 @@
-from lib2to3.pgen2 import driver
+# from lib2to3.pgen2 import driver
 from pathlib import Path
-
+import json
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -20,8 +20,11 @@ def main(req):
             "query": query,
             "trs": driver_results[0],
             "titles": driver_results[1],
-            "urls": driver_results[2]
+            "urls": driver_results[2],
         }
+        jsonctx = json.dumps(sample)
+        # print(jsonctx)
+        sample['jctx'] = jsonctx
         return render(req, 'main.html', sample)
     else:
         driver_results = tr_driver(req.user_agent.browser.family, dtu, "https://youtube.com/c/"+str(query))
@@ -33,6 +36,9 @@ def main(req):
             "titles": driver_results[1],
             "urls": driver_results[2]
         }
+        jsonctx = json.dumps(sample)
+        # print(jsonctx)
+        sample['jctx'] = jsonctx
         return render(req, 'main.html', sample)
 
 
